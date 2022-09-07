@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #d9dcd6;
+}
+
+header {
+  padding: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #073f1f;
+  color: whitesmoke;
+}
+
+header h1 {
+  display: inline-block;
+  font-size: 48px;
+  color: #d9dcd6;
+}
+
+header nav {
+  padding-top: 15px;
+  margin-right: 20px;
+  float: right;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+p {
+  font-size: 100%;
+  background-color: #073f1f;
+  color: whitesmoke;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#pnw {
+  height: 600px;
+  width: 100%;
+  margin-bottom: 5px;
+  background-image: url("./images/pnw.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#matthew {
+  height: 200px;
+  padding: 5px;
+  width: 100%;
+}
+
+#about {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  clear: both;
+  float: left;
+  width: 24%;
+  height: 450px;  
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #073f1f;
+  color: whitesmoke;
+}
+
+#projects {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  clear: both;
+  float: left;
+  width: 24%;
+  height: 1000px;  
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #073f1f;
+  color: whitesmoke;
+}
+
+.content {
+  width: 75%;
+  display: inline-block;
+}
+
+.content2 {
+  margin-bottom: 5px;
+  height: 450px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #073f1f;
+  color: whitesmoke;
+}
+
+.content2 img {
+  max-height: 400px;
+}
+
+content2 p {
+  font-size: 100%;
+  margin-left: 10px;
+}
+
+#bigProject{
+  flex: 1 0 0;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+}
+#bigProject header{
+  background-color: #073f1f;
+  color: whitesmoke;
+}
+
+#bigProject img {
+  width: 100%;
+  display: inline
+}
+.projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  border-width: 1px;
+}
+.card {
+  width: 50%;
+  text-align: center;
+  border-style: solid;
+  margin-bottom: 5px;
+}
+
+.card header {
+  background-color: #073f1f;
+  color: #ffffff;
+}
+
+.card img {
+  width: 100%;
+}
+
+#contact {
+  clear: both;
+  float: left;
+  width: 24%;
+  height: 100px;  
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #073f1f;
+  color: whitesmoke;
+}
+
+.contactContent ul {
+  background-color: #073f1f;
+  margin-top: 5px;
+  height: 100px;
+}
+
+.contactContent ul li{
+  display: inline-block;
+  margin: 50px 50px 50px 50px;
+  color: whitesmoke;
+}
+
+footer {
+  clear: both;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+@media screen and (min-width: 768px) {
+  /* on tablets, set columns to only be 50% of the width and not grow */
+  .card-column {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  /* select the last child to grow to full width if it has space to grow */
+  .card-column:last-child {
+    flex-grow: 1;
+  }
+}
+
+/* media query for larger screens */
+@media screen and (min-width: 992px) {
+  header {
+    width: 75%;
+  }
+
+  .card-column {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+}
